@@ -12,6 +12,8 @@
 		2A2B99A12A9D366E002F4F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2B99A02A9D366E002F4F1B /* Assets.xcassets */; };
 		2A2B99A42A9D366E002F4F1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2B99A32A9D366E002F4F1B /* Preview Assets.xcassets */; };
 		2A2B99AC2A9D3A99002F4F1B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B99AB2A9D3A99002F4F1B /* AddHabitView.swift */; };
+		2A2B99AE2A9D3D0A002F4F1B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B99AD2A9D3D0A002F4F1B /* Habit.swift */; };
+		2A2B99B02A9D3D2F002F4F1B /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B99AF2A9D3D2F002F4F1B /* Habits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2A2B99A32A9D366E002F4F1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A2B99AA2A9D368A002F4F1B /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		2A2B99AB2A9D3A99002F4F1B /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		2A2B99AD2A9D3D0A002F4F1B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		2A2B99AF2A9D3D2F002F4F1B /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				2A2B999C2A9D366D002F4F1B /* HabitRabbitApp.swift */,
 				2A2B999E2A9D366D002F4F1B /* ContentView.swift */,
+				2A2B99AD2A9D3D0A002F4F1B /* Habit.swift */,
+				2A2B99AF2A9D3D2F002F4F1B /* Habits.swift */,
 				2A2B99AB2A9D3A99002F4F1B /* AddHabitView.swift */,
 				2A2B99AA2A9D368A002F4F1B /* Notes.md */,
 				2A2B99A02A9D366E002F4F1B /* Assets.xcassets */,
@@ -143,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2B999F2A9D366D002F4F1B /* ContentView.swift in Sources */,
+				2A2B99B02A9D3D2F002F4F1B /* Habits.swift in Sources */,
 				2A2B999D2A9D366D002F4F1B /* HabitRabbitApp.swift in Sources */,
+				2A2B99AE2A9D3D0A002F4F1B /* Habit.swift in Sources */,
 				2A2B99AC2A9D3A99002F4F1B /* AddHabitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
