@@ -19,6 +19,7 @@
 		2A2B999E2A9D366D002F4F1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A2B99A02A9D366E002F4F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A2B99A32A9D366E002F4F1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A2B99AA2A9D368A002F4F1B /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 			children = (
 				2A2B999C2A9D366D002F4F1B /* HabitRabbitApp.swift */,
 				2A2B999E2A9D366D002F4F1B /* ContentView.swift */,
+				2A2B99AA2A9D368A002F4F1B /* Notes.md */,
 				2A2B99A02A9D366E002F4F1B /* Assets.xcassets */,
 				2A2B99A22A9D366E002F4F1B /* Preview Content */,
 			);
