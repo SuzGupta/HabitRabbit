@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @State private var showingAddHabit = false
+
   var body: some View {
     VStack {
       Text("What habit would you like to track?")
         .padding()
       Button("Add a habit") {
-        // code
+        showingAddHabit = true
       }
     }
-    .padding()
+    .sheet(isPresented: $showingAddHabit) {
+      AddHabitView()
+    }
   }
 }
 
