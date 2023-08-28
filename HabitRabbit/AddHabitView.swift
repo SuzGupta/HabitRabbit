@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AddHabitView: View {
-  //  @ObservedObject var expenses: Expenses
-  //  @Environment(\.dismiss) var dismiss
+  @ObservedObject var habits: Habits
+  @Environment(\.dismiss) var dismiss
   
   @State private var name = ""
   @State private var description = ""
@@ -26,9 +26,9 @@ struct AddHabitView: View {
       .navigationTitle("Add a habit")
       .toolbar {
         Button("Save") {
-          //            let item = ExpenseItem(name: name, type: type, amount: amount)
-          //            expenses.items.append(item)
-          //            dismiss()
+          let habit = Habit(name: name, description: description)
+          habits.items.append(habit)
+          dismiss()
         }
       }
     }
@@ -37,6 +37,6 @@ struct AddHabitView: View {
 
 struct AddHabitView_Previews: PreviewProvider {
   static var previews: some View {
-    AddHabitView()
+    AddHabitView(habits: Habits())
   }
 }

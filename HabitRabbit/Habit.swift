@@ -11,6 +11,6 @@ struct Habit: Identifiable, Codable {
   var id = UUID()
   let name: String
   let description: String
-  let amount: Int
+  let amount: Int = 0
 }
 

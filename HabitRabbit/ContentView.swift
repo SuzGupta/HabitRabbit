@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-
+  @StateObject var habits = Habits()
   @State private var showingAddHabit = false
 
   var body: some View {
@@ -20,7 +20,7 @@ struct ContentView: View {
       }
     }
     .sheet(isPresented: $showingAddHabit) {
-      AddHabitView()
+      AddHabitView(habits: habits)
     }
   }
 }
