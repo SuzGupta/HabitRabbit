@@ -27,6 +27,7 @@ struct ContentView: View {
                 .font(.caption)
             }
           }
+          .onDelete(perform: removeItems)
         }
         Text("What habit would you like to track?")
           .padding()
@@ -40,10 +41,14 @@ struct ContentView: View {
       .navigationTitle("Habit Rabbit 🐰")
     }
   }
+
+  func removeItems(at offsets: IndexSet) {
+    habits.items.remove(atOffsets: offsets)
+  }
 }
 
-  struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-      ContentView()
-    }
+struct ContentView_Previews: PreviewProvider {
+  static var previews: some View {
+    ContentView()
   }
+}
