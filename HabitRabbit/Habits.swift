@@ -7,6 +7,8 @@
 
 import Foundation
 
+// aha, saving to UserDefaults should live here in the class
+
 class Habits: ObservableObject {
   @Published var items = [Habit]() {
     didSet {
@@ -17,4 +19,15 @@ class Habits: ObservableObject {
       }
     }
   }
+
+  init() {
+    if let savedItems = UserDefaults.standard.data(forKey: "Habits") {
+      if let decodedItems = try? JSONDecoder().decode([Habit].self, from: savedItems) {
+        items = decodedItems
+        return
+      }
+    }
+    items = []
+  }
+  
 }
