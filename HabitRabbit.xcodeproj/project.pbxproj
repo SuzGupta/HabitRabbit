@@ -14,6 +14,7 @@
 		2A2B99AC2A9D3A99002F4F1B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B99AB2A9D3A99002F4F1B /* AddHabitView.swift */; };
 		2A2B99AE2A9D3D0A002F4F1B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B99AD2A9D3D0A002F4F1B /* Habit.swift */; };
 		2A2B99B02A9D3D2F002F4F1B /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B99AF2A9D3D2F002F4F1B /* Habits.swift */; };
+		2A692F332AA2BFD1009CAFA3 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A692F322AA2BFD1009CAFA3 /* HabitDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2A2B99AB2A9D3A99002F4F1B /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		2A2B99AD2A9D3D0A002F4F1B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		2A2B99AF2A9D3D2F002F4F1B /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
+		2A692F322AA2BFD1009CAFA3 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2A2B999C2A9D366D002F4F1B /* HabitRabbitApp.swift */,
 				2A2B999E2A9D366D002F4F1B /* ContentView.swift */,
 				2A2B99AD2A9D3D0A002F4F1B /* Habit.swift */,
+				2A692F322AA2BFD1009CAFA3 /* HabitDetailView.swift */,
 				2A2B99AF2A9D3D2F002F4F1B /* Habits.swift */,
 				2A2B99AB2A9D3A99002F4F1B /* AddHabitView.swift */,
 				2A2B99AA2A9D368A002F4F1B /* Notes.md */,
@@ -150,6 +153,7 @@
 			files = (
 				2A2B999F2A9D366D002F4F1B /* ContentView.swift in Sources */,
 				2A2B99B02A9D3D2F002F4F1B /* Habits.swift in Sources */,
+				2A692F332AA2BFD1009CAFA3 /* HabitDetailView.swift in Sources */,
 				2A2B999D2A9D366D002F4F1B /* HabitRabbitApp.swift in Sources */,
 				2A2B99AE2A9D3D0A002F4F1B /* Habit.swift in Sources */,
 				2A2B99AC2A9D3A99002F4F1B /* AddHabitView.swift in Sources */,
