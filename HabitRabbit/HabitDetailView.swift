@@ -26,9 +26,12 @@ struct HabitDetailView: View {
           .font(.subheadline)
           .foregroundColor(.white)
         Stepper("Count: \(habit.amount)", value: $habit.amount)
-          .foregroundColor(.white)
+          .labelsHidden()
+          .background()
+          .opacity(0.7)
+          .cornerRadius(8)
         // why aren't the stepper controls white?
-          .padding(.horizontal, 50)
+          .padding(.horizontal, 110)
       }
     }
   }
