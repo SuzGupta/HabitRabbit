@@ -14,9 +14,7 @@ struct AddHabitView: View {
   @State private var name = ""
   @State private var description = ""
   @State private var showingAlert = false
-  
-  //  let types = ["Business", "Personal"]
-  
+    
   var body: some View {
     NavigationView {
       Form {
