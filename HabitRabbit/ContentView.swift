@@ -36,24 +36,33 @@ struct ContentView: View {
               }
             }
           }
+          .onMove(perform: moveItems)
           .onDelete(perform: removeItems)
         }
 
-        Text("What habit would you like to track?")
-              .padding()
+        Text("What would you like to track?")
+          .padding()
         Button("Add a habit") {
-              showingAddHabit = true
-            }
+          showingAddHabit = true
         }
+      }
       .navigationTitle("Habit Rabbit 🐰")
+      .toolbar {
+        ToolbarItem { EditButton() }
       }
-      .sheet(isPresented: $showingAddHabit) {
+    }
+
+    .sheet(isPresented: $showingAddHabit) {
       AddHabitView(habits: habits)
-      }
-      }
+    }
+  }
 
   func removeItems(at offsets: IndexSet) {
     self.habits.items.remove(atOffsets: offsets)
+  }
+
+  func moveItems(from source: IndexSet, to destination: Int) {
+    self.habits.items.move(fromOffsets: source, toOffset: destination)
   }
 }
 
