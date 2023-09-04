@@ -13,6 +13,7 @@ struct AddHabitView: View {
   
   @State private var name = ""
   @State private var description = ""
+  @State private var showingAlert = false
   
   //  let types = ["Business", "Personal"]
   
@@ -26,10 +27,18 @@ struct AddHabitView: View {
       .navigationTitle("Add a habit")
       .toolbar {
         Button("Save") {
-          let habit = Habit(name: name, description: description)
-          habits.items.append(habit)
-          dismiss()
+          if !name.isEmpty && !description.isEmpty {
+            let habit = Habit(name: name, description: description)
+            habits.items.append(habit)
+            dismiss()
+          } else {
+            showingAlert = true
+          }
+
         }
+      }
+      .alert(isPresented: $showingAlert) {
+          Alert(title: Text("Whoops"), message: Text("Please fill in a habit name and a description"))
       }
     }
   }
