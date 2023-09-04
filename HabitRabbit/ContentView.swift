@@ -15,6 +15,14 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       VStack {
+        if habits.items.isEmpty {
+          Spacer()
+            .frame(height: 180)
+          Image("RabbitForNoHabits-ideogram")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 360)
+        }
         List {
           ForEach(habits.items.indices, id:\.self) { index in
             NavigationLink(destination: HabitDetailView(habit: $habits.items[index])) {
@@ -37,12 +45,11 @@ struct ContentView: View {
               showingAddHabit = true
             }
         }
+      .navigationTitle("Habit Rabbit 🐰")
       }
-
       .sheet(isPresented: $showingAddHabit) {
       AddHabitView(habits: habits)
       }
-      .navigationTitle("Habit Rabbit 🐰")
       }
 
   func removeItems(at offsets: IndexSet) {

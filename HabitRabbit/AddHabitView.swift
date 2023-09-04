@@ -19,8 +19,8 @@ struct AddHabitView: View {
   var body: some View {
     NavigationView {
       Form {
-        TextField("Name", text: $name)
-        TextField("Description", text: $description)
+        TextField("Name your habit, like Reading", text: $name)
+        TextField("Say a little more about your habit", text: $description)
         
       }
       .navigationTitle("Add a habit")
