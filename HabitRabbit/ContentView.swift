@@ -15,35 +15,38 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       VStack {
-        Text("My Habits")
         List {
-          ForEach(habits.items) { habit in
-            VStack(alignment: .leading) {
-              Text(habit.name)
-                .font(.headline)
-              Text(habit.description)
-                .font(.subheadline)
-              Text("\(habit.amount)")
-                .font(.caption)
+          ForEach(habits.items.indices, id:\.self) { index in
+            NavigationLink(destination: HabitDetailView(habit: $habits.items[index])) {
+              HStack {
+                Text(habits.items[index].name)
+                  .font(.headline)
+                Spacer()
+                Text(habits.items[index].amount == 1 ? "\(habits.items[index].amount) Day" : "\(habits.items[index].amount) Days")
+                  .font(.headline)
+                  .fontWeight(.bold)
+              }
             }
           }
           .onDelete(perform: removeItems)
         }
+
         Text("What habit would you like to track?")
-          .padding()
+              .padding()
         Button("Add a habit") {
-          showingAddHabit = true
+              showingAddHabit = true
+            }
         }
       }
+
       .sheet(isPresented: $showingAddHabit) {
-        AddHabitView(habits: habits)
+      AddHabitView(habits: habits)
       }
       .navigationTitle("Habit Rabbit 🐰")
-    }
-  }
+      }
 
   func removeItems(at offsets: IndexSet) {
-    habits.items.remove(atOffsets: offsets)
+    self.habits.items.remove(atOffsets: offsets)
   }
 }
 

@@ -20,7 +20,11 @@ struct HabitDetailView: View {
         .padding()
       VStack(spacing: 20) {
         Text("\(habit.name)")
+          .font(.title)
+          .foregroundColor(.white)
+        Text(habit.amount == 1 ? "\(habit.amount) Day So Far! 💪" : "\(habit.amount) Days So Far! 💪")
           .font(.headline)
+          .fontWeight(.bold)
           .foregroundColor(.white)
         Text("\(habit.description)")
           .font(.subheadline)
