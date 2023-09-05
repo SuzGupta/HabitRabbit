@@ -39,11 +39,12 @@ struct AddHabitView: View {
             .textFieldStyle(.roundedBorder)
             .foregroundColor(Color("Secondary").opacity(0.9))
             .padding()
-            Image("CanDoRabbit-ideogram")
+            Image("PinkCanDoRabbit")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 180)
             .clipShape(Circle())
+            .shadow(radius: 6)
         }
         .padding(.horizontal, 40)
       }

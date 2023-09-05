@@ -10,11 +10,12 @@ import SwiftUI
 struct HabitDetailView: View {
   @Binding var habit: Habit
 
-  var gradient: LinearGradient {
-    LinearGradient(gradient: Gradient(colors: [Color("Accent1"), Color("Accent2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
-  }
+  let gradient = LinearGradient(gradient: Gradient(colors: [Color("Primary"), .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+
   var body: some View {
     ZStack {
+      Color("NeutralBase")
+        .ignoresSafeArea()
       RoundedRectangle(cornerRadius: 25)
         .fill(gradient)
         .padding()
