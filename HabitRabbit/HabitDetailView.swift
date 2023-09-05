@@ -11,7 +11,7 @@ struct HabitDetailView: View {
   @Binding var habit: Habit
 
   var gradient: LinearGradient {
-    LinearGradient(gradient: Gradient(colors: [.purple,.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    LinearGradient(gradient: Gradient(colors: [Color("Accent1"), Color("Accent2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
   }
   var body: some View {
     ZStack {
@@ -22,7 +22,7 @@ struct HabitDetailView: View {
         Text("\(habit.name)")
           .font(.title)
           .foregroundColor(.white)
-        Text(habit.amount == 1 ? "\(habit.amount) Day So Far! 💪" : "\(habit.amount) Days So Far! 💪")
+        Text(habit.amount == 1 ? "\(habit.amount) Day So Far!" : "\(habit.amount) Days So Far!")
           .font(.headline)
           .fontWeight(.bold)
           .foregroundColor(.white)
@@ -31,10 +31,8 @@ struct HabitDetailView: View {
           .foregroundColor(.white)
         Stepper("Count: \(habit.amount)", value: $habit.amount)
           .labelsHidden()
-          .background()
-          .opacity(0.7)
+          .background(Color("PastelPink"))
           .cornerRadius(8)
-        // why aren't the stepper controls white?
           .padding(.horizontal, 110)
       }
     }

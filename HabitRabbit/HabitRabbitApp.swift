@@ -12,6 +12,7 @@ struct HabitRabbitApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .accentColor(Color("Secondary"))
         }
     }
 }

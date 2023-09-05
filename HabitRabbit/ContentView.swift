@@ -29,10 +29,12 @@ struct ContentView: View {
               HStack {
                 Text(habits.items[index].name)
                   .font(.headline)
+                  .foregroundColor(Color("TextColor"))
                 Spacer()
                 Text(habits.items[index].amount == 1 ? "\(habits.items[index].amount) Day" : "\(habits.items[index].amount) Days")
                   .font(.headline)
                   .fontWeight(.bold)
+                  .foregroundColor(Color("TextColor"))
               }
             }
           }
@@ -45,13 +47,17 @@ struct ContentView: View {
         Button("Add a habit") {
           showingAddHabit = true
         }
+        .padding()
+        .background(Color("Primary"))
+        .foregroundColor(.white)
+        .cornerRadius(8)
       }
       .navigationTitle("Habit Rabbit 🐰")
       .toolbar {
         ToolbarItem { EditButton() }
       }
     }
-
+    .background(Color("NeutralBase"))
     .sheet(isPresented: $showingAddHabit) {
       AddHabitView(habits: habits)
     }
