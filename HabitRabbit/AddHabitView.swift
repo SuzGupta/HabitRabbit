@@ -11,20 +11,14 @@ struct AddHabitView: View {
   @ObservedObject var habits: Habits
   @Environment(\.dismiss) var dismiss
   
-  @State private var name = "Name your habit, like \"Reading\""
-  @State private var description = "Then, say a little more about it"
+  @State private var name = ""
+  @State private var description = ""
   @State private var showingAlert = false
 
   let gradient = LinearGradient(gradient: Gradient(colors: [Color("Primary"), .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
     
   var body: some View {
     NavigationView {
-//      Form {
-//        TextField("Name your habit, like Reading", text: $name)
-//        TextField("Say a little more about your habit", text: $description)
-//
-//      }
-
       ZStack {
         Color("NeutralBase")
           .ignoresSafeArea()
@@ -32,10 +26,10 @@ struct AddHabitView: View {
           .fill(gradient)
           .padding()
         VStack {
-          TextField("Name", text: $name)
+          TextField("Name your habit", text: $name)
             .textFieldStyle(.roundedBorder)
             .foregroundColor(Color("Secondary")).opacity(0.9)
-          TextField("Description", text: $description)
+          TextField("Share a little more about it", text: $description)
             .textFieldStyle(.roundedBorder)
             .foregroundColor(Color("Secondary").opacity(0.9))
             .padding()

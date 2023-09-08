@@ -20,3 +20,9 @@ extension Color {
     static let goldenYellow = Color("GoldenYellow")
     static let pastelPink = Color("PastelPink")
 }
+
+## Remaining improvements
+
+- The gradient should be defined in just one place
+- The Add Habit button should use a gradient and be animated
+- Other animation should be added

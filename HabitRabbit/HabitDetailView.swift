@@ -10,7 +10,7 @@ import SwiftUI
 struct HabitDetailView: View {
   @Binding var habit: Habit
 
-  let gradient = LinearGradient(gradient: Gradient(colors: [Color("Primary"), .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+  let gradient = LinearGradient(gradient: Gradient(colors: [Color("Primary"), Color("NeutralBase")]), startPoint: .topLeading, endPoint: .bottomTrailing)
 
   var body: some View {
     ZStack {
